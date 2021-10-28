@@ -1,0 +1,21 @@
+<?php
+
+/*
+ * @file
+ * code for Simple Form
+*/
+
+/**
+ * Implements hook_theme().
+ */
+function simple_custom_module_theme() {
+    return [
+        'simple_custom_module' => [
+          'render element' => 'form',
+        ],
+      ];
+}
+ function simple_custom_module_page_attachments(array &$attachments) {
+   $attachments['#attached']['library'][] = 'simple_custom_module/simple_custom_module';
+ }
+?>
